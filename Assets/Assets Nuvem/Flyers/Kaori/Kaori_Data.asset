@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e879aeb584d40e409b224faf1a5d650, type: 3}
+  m_Name: Kaori_Data
+  m_EditorClassIdentifier: 
+  nome: Kaori
+  id: 3
+  Ativo: 1
+  podeComprar: 0
+  classe: 4
+  vida: 40
+  escudo: 50
+  velocidade: 5
+  cargasDash: 6
+  Afinidade1: 6
+  Afinidade2: 4
+  NaoAfinidade1: 3
+  NaoAfinidade2: 7
+  isRanged: 1
+  VelDeAtk: 1
+  danoAtk: 8
+  rangeAtk: 3.5
+  supremaIcon: {fileID: 21300000, guid: 0fe979394cb87ce468265ac6dbf92d8f, type: 3}
+  recargaSuprema: 30
+  arrastarSuprema: 0
+  passivaDesc: A cada 4 ataques basicos, Kaori cria um raio que paralisa o inimigo
+    mais proximo.
+  supremaDesc: "Kaori faz o sol focar nela e recuperar a vida dela e dos aliados
+    dentro da \xE1rea."
+  quadradoSprite: {fileID: 21300000, guid: 6a1360d78ebf2d34488d789db80517b5, type: 3}
+  kdaSprite: {fileID: 21300000, guid: 9b73870ff7e35f648bceb42668d163a4, type: 3}
+  moedasValor: 0
+  cristaisValor: 0
+  usarPadrao: 1
+  deckAtual: 0
+  decks:
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  skins:
+  - nome: Padrao
+    id: 0
+    SplashSprite: {fileID: 21300000, guid: 62a0dba6b67ba3a47b17117094bbebb4, type: 3}
+    painelSprite: {fileID: 21300000, guid: 750fe86d94fce974bb85b29cb0d0c942, type: 3}
+    quadroSprite: {fileID: 21300000, guid: 6a1360d78ebf2d34488d789db80517b5, type: 3}
+    prefab_UI: {fileID: 2021468567234768863, guid: 09607da2be9a9c041b33e473ec36dc64, type: 3}
+    skinOverrideController: {fileID: 0}
+    armaOverrideController: {fileID: 0}
+    hitArma: {fileID: 0}
+    cristaisValor: 0
+    evento: 0
+  prefabPersonagem: {fileID: 0}

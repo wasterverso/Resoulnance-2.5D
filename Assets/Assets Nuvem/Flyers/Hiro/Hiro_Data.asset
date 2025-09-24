@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e879aeb584d40e409b224faf1a5d650, type: 3}
+  m_Name: Hiro_Data
+  m_EditorClassIdentifier: 
+  nome: Hiro
+  id: 0
+  Ativo: 1
+  podeComprar: 0
+  classe: 2
+  vida: 60
+  escudo: 40
+  velocidade: 5
+  cargasDash: 6
+  Afinidade1: 7
+  Afinidade2: 2
+  NaoAfinidade1: 1
+  NaoAfinidade2: 6
+  isRanged: 0
+  VelDeAtk: 1
+  danoAtk: 15
+  rangeAtk: 2
+  supremaIcon: {fileID: 21300000, guid: ab021076f95ba5c4c912c9e69e7c5f0c, type: 3}
+  recargaSuprema: 30
+  arrastarSuprema: 1
+  passivaDesc: "A cada 3 ataques basicos, o 4 ataque ser\xE1 um ataque duplo."
+  supremaDesc: A espada de Hiro cresce e canaliza um ataque que causa dano real.
+  quadradoSprite: {fileID: 21300000, guid: 3d784b7cc75b17f488c43026a632c324, type: 3}
+  kdaSprite: {fileID: 21300000, guid: e0f2e71b8075aca42a56e17ea7a8bf38, type: 3}
+  moedasValor: 0
+  cristaisValor: 0
+  deckFavorito:
+    nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  decks:
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  skins:
+  - nome: Padrao
+    id: 0
+    SplashSprite: {fileID: 21300000, guid: 6048ee58e2734a24ab5e2fcd30f1b749, type: 3}
+    painelSprite: {fileID: 21300000, guid: e79f572922aa2c54fa3a756da520c0ad, type: 3}
+    quadroSprite: {fileID: 21300000, guid: 87254845009de7a4799bdaeeafd42e1e, type: 3}
+    prefab_UI: {fileID: 2021468567234768863, guid: 78e73caa684b9874ba8a065065dc193f, type: 3}
+    skinOverrideController: {fileID: 0}
+    armaOverrideController: {fileID: 0}
+    hitArma: {fileID: 0}
+    cristaisValor: 0
+    evento: 0
+  prefabPersonagem: {fileID: 1654047172462168197, guid: 5f35cac708b191444b3ad0175c6e2932, type: 3}

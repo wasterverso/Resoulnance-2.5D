@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e879aeb584d40e409b224faf1a5d650, type: 3}
+  m_Name: Mia_Data
+  m_EditorClassIdentifier: 
+  nome: Mia
+  id: 2
+  Ativo: 0
+  podeComprar: 0
+  classe: 1
+  vida: 45
+  escudo: 50
+  velocidade: 6
+  cargasDash: 6
+  Afinidade1: 4
+  Afinidade2: 5
+  NaoAfinidade1: 6
+  NaoAfinidade2: 1
+  isRanged: 1
+  VelDeAtk: 1
+  danoAtk: 7
+  rangeAtk: 4.5
+  supremaIcon: {fileID: 0}
+  recargaSuprema: 0
+  arrastarSuprema: 0
+  passivaDesc: 
+  supremaDesc: 
+  quadradoSprite: {fileID: 21300000, guid: 51fb90d1b69e1974e9339d202504cae8, type: 3}
+  kdaSprite: {fileID: 0}
+  moedasValor: 0
+  cristaisValor: 0
+  usarPadrao: 1
+  deckAtual: 0
+  skins:
+  - nome: Padrao
+    id: 0
+    SplashSprite: {fileID: 21300000, guid: 9c21d329cbb6f0b469491ca17b98b7d5, type: 3}
+    painelSprite: {fileID: 21300000, guid: 00829057d4fdd0942962b2f540d32bef, type: 3}
+    quadroSprite: {fileID: 21300000, guid: 308ed7b72a0982f488f57303b044a740, type: 3}
+    prefab_UI: {fileID: 0}
+    skinOverrideController: {fileID: 0}
+    armaOverrideController: {fileID: 0}
+    hitArma: {fileID: 0}
+    cristaisValor: 0
+    evento: 0
+  prefabPersonagem: {fileID: 0}

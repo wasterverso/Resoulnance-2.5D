@@ -1,0 +1,61 @@
+{
+  "instance_id": "00000000-0000-0000-0000-000000000000",
+  "region": "us-east",
+  "api-key": "***REDACTED***",
+  "startup_args": "",
+  "version_tag": "default",
+  "custom_data": {
+    "game_specific_settings": {
+      "GameServerData": {
+        "gamemode": "Stock",
+        "GameRules": {
+          "Speed": "1.0",
+          "Stocks": "3",
+          "Allow Speed": "True"
+        },
+        "lobbyType": "Custom Lobby",
+        "LobbyRules": {
+          "Map": "Sumo",
+          "Teams": "False",
+          "Required Players": "1"
+        }
+      },
+      "LobbyPlayerData": {
+        "Player1": {
+          "uid": "XXXXXXXXXXXXXXXX",
+          "isHost": true,
+          "isSelf": true,
+          "isActive": true,
+          "username": "Player1",
+          "DisplayName": "Player1",
+          "Initialized": true,
+          "lobbyStatus": 2,
+          "selectedColor": "Default",
+          "ButtonPoolName": "PlayerConfiguration",
+          "HostUpdatedData": false
+        }
+      }
+    },
+    "players": [
+      "Player1"
+    ],
+    "host": "Player1",
+    "player_states": {
+      "Player1": {
+        "UID": "XXXXXXXXXXXXXXXX",
+        "IsHost": true,
+        "IsActive": true,
+        "Username": "Player1",
+        "LobbyStatus": 2,
+        "HostUpdatedData": false,
+        "SelectedCharacter": "Default"
+      }
+    },
+    "lobby_id": "00000000-0000-0000-0000-000000000000",
+    "lobby_name": "Custom Lobby",
+    "max_players": 30,
+    "allow_late_join": true
+  },
+  "match_id": "00000000-0000-0000-0000-000000000000",
+  "arguments": ""
+}

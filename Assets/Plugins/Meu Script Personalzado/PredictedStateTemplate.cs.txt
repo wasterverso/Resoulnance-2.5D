@@ -1,0 +1,15 @@
+using UnityEngine;
+using PurrNet.Prediction;
+
+public class #SCRIPTNAME# : PredictedIdentity<#SCRIPTNAME#.State>
+{
+    protected override void Simulate(ref State state, float delta)
+    {
+        
+    }
+
+    public struct State : IPredictedData<State>
+    {
+        public void Dispose() { }
+    }
+}

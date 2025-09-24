@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e879aeb584d40e409b224faf1a5d650, type: 3}
+  m_Name: Kiara_Data
+  m_EditorClassIdentifier: 
+  nome: Kiara_Data
+  id: 4
+  Ativo: 0
+  podeComprar: 0
+  classe: 3
+  vida: 80
+  escudo: 30
+  velocidade: 4.5
+  cargasDash: 6
+  Afinidade1: 3
+  Afinidade2: 7
+  NaoAfinidade1: 5
+  NaoAfinidade2: 1
+  isRanged: 0
+  VelDeAtk: 1
+  danoAtk: 10
+  rangeAtk: 2
+  supremaIcon: {fileID: 0}
+  recargaSuprema: 0
+  arrastarSuprema: 0
+  passivaDesc: 
+  supremaDesc: 
+  quadradoSprite: {fileID: 21300000, guid: b1437604add99154898816f0ba0c4d92, type: 3}
+  kdaSprite: {fileID: 0}
+  moedasValor: 0
+  cristaisValor: 0
+  usarPadrao: 1
+  deckAtual: 0
+  decks:
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  skins:
+  - nome: Padrao
+    id: 0
+    SplashSprite: {fileID: 21300000, guid: 942366f0589fea94b97a5ae4b7da5b93, type: 3}
+    painelSprite: {fileID: 21300000, guid: 8a427d1fee9c47e4587573682542f16b, type: 3}
+    quadroSprite: {fileID: 21300000, guid: 5b4939f3a2bdf2a41bfaf7965b113da1, type: 3}
+    prefab_UI: {fileID: 2021468567234768863, guid: e03ced459d07273459c373b1782bf2f1, type: 3}
+    skinOverrideController: {fileID: 0}
+    armaOverrideController: {fileID: 0}
+    hitArma: {fileID: 0}
+    cristaisValor: 0
+    evento: 0
+  prefabPersonagem: {fileID: 0}

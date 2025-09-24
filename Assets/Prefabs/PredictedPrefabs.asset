@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd6605d666f95f479712408e07522e5, type: 3}
+  m_Name: PredictedPrefabs
+  m_EditorClassIdentifier: 
+  _autoGenerate: 0
+  _folder: {fileID: 102900000, guid: 219b0ecc934601d41ab4d31c6f5921b7, type: 3}
+  _defaultPooling:
+    usePooling: 0
+    initialSize: 0
+  _prefabs: []
+  _newPrefabs:
+  - prefab: {fileID: 3770931553537743039, guid: 606ed0c8534a18141801729b7744983d, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 1654047172462168197, guid: 5f35cac708b191444b3ad0175c6e2932, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 3536481447938680525, guid: 921cdb2c3e1ed2748a7318fcfa71e3b6, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 8980485352204858536, guid: c12d596d4cd29664e8fb8e19334a9e19, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 4682243460979570675, guid: 05cf24103dbeeb24e8a05c4151ceacac, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 9098590526355040050, guid: 0bc7d7dfc3503a349accd39257b75a97, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 2295434987117425868, guid: e0fbcf8d0d113a54ca830e5074dcc2a6, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 284105829098542317, guid: 1497c21e40adb344ca4120c88adfdd8c, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 2743860401330450793, guid: 51881fe02b059cc49bb208a335a472f3, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 8182482244597205116, guid: 737c33972e981184ebea889af37e2463, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0
+  - prefab: {fileID: 3575569008841008769, guid: a344518d58cb82f499a2024128173845, type: 3}
+    pooling:
+      usePooling: 0
+      initialSize: 0

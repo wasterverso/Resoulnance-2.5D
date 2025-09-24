@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60f1954874194a4d8e6f0d8e92874b5, type: 3}
+  m_Name: FlyersList_GlobalList
+  m_EditorClassIdentifier: 
+  personagens:
+  - {fileID: 11400000, guid: 696709f7eb68000419c19d78265e6cbc, type: 2}
+  - {fileID: 11400000, guid: c49c7daa92cf3d8478d4acdbc07f3e79, type: 2}
+  - {fileID: 11400000, guid: 01da8eef2f76ac34580f310a472b8e57, type: 2}
+  - {fileID: 11400000, guid: 6e033df7d5f437240b5c916f5beb6603, type: 2}
+  - {fileID: 11400000, guid: d731ce22ed6da284599bb2ab1fa1b63f, type: 2}

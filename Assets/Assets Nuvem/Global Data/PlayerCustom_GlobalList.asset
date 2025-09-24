@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5fef735c395754bb9f40cbf64b2aac, type: 3}
+  m_Name: PlayerCustom_GlobalList
+  m_EditorClassIdentifier: 
+  acessorios:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b06ba65ecf3d44143acdbf555f536ed2, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 813a71a0b23931e4bbb37df44d8d8a9f, type: 3}
+  - id: 1
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 30aa6b4b3b06c3e438a4e2ec08a4f6bf, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 30aa6b4b3b06c3e438a4e2ec08a4f6bf, type: 3}
+  - id: 2
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: eb8ab7bd78a27194393ae4ee88f7d275, type: 3}
+    frames:
+    - {fileID: 21300000, guid: eb8ab7bd78a27194393ae4ee88f7d275, type: 3}
+  - id: 3
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 1c4864c1315047f4a9a0c7b8f8a20187, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 1c4864c1315047f4a9a0c7b8f8a20187, type: 3}
+  - id: 4
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 01a7f917b6555304dbd945f740961817, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 01a7f917b6555304dbd945f740961817, type: 3}
+  - id: 5
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 882610b658fe421438a6680d97c7a275, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 882610b658fe421438a6680d97c7a275, type: 3}
+  - id: 6
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 2ca4d3b804912d14bb5100e80f26af51, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 2ca4d3b804912d14bb5100e80f26af51, type: 3}
+  - id: 7
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 8f80a62092f7d6449b99ed379959ada4, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 8f80a62092f7d6449b99ed379959ada4, type: 3}
+  - id: 8
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b6fbc500765e486489b3d02fbed215c8, type: 3}
+    frames:
+    - {fileID: 21300000, guid: b6fbc500765e486489b3d02fbed215c8, type: 3}
+  - id: 9
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 9f0b936252906f54cb2e2c566e76e9b2, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 9f0b936252906f54cb2e2c566e76e9b2, type: 3}
+  - id: 10
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: ae6067bdf5637d74489bf9c8579bc4b3, type: 3}
+    frames:
+    - {fileID: 21300000, guid: ae6067bdf5637d74489bf9c8579bc4b3, type: 3}
+  - id: 11
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 18a31be892c80ea4f91ba67c608169af, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 18a31be892c80ea4f91ba67c608169af, type: 3}
+  - id: 12
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 9d36fe41bb6f4554fb38b7101ecfc199, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 9d36fe41bb6f4554fb38b7101ecfc199, type: 3}
+  - id: 13
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 515b2dca9137f5347b12e5c3f6eb8a82, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 515b2dca9137f5347b12e5c3f6eb8a82, type: 3}
+  - id: 14
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 177c4dd888bd8e04b8e18fd59c77bda4, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 177c4dd888bd8e04b8e18fd59c77bda4, type: 3}
+  cabelos:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b06ba65ecf3d44143acdbf555f536ed2, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 813a71a0b23931e4bbb37df44d8d8a9f, type: 3}
+  - id: 1
+    cor: {r: 0, g: 0, b: 0, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: ae422c8355cc2e74e92a6f474a191b5a, type: 3}
+    frames:
+    - {fileID: 21300000, guid: ae422c8355cc2e74e92a6f474a191b5a, type: 3}
+  - id: 2
+    cor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b7e84ffd93f78a543b5f163ff38391f9, type: 3}
+    frames:
+    - {fileID: 21300000, guid: b7e84ffd93f78a543b5f163ff38391f9, type: 3}
+  - id: 3
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 854384710c6df3440b52a7ba99c7badc, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 854384710c6df3440b52a7ba99c7badc, type: 3}
+  - id: 4
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 93eaa8d0bc53f8b4fa9a0789f6bfe4fc, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 93eaa8d0bc53f8b4fa9a0789f6bfe4fc, type: 3}
+  - id: 5
+    cor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 71c70a74a38836e4c8be62ac9870dd2e, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 71c70a74a38836e4c8be62ac9870dd2e, type: 3}
+  - id: 6
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b6df325ef96348f4f884f1c37ea466de, type: 3}
+    frames:
+    - {fileID: 21300000, guid: b6df325ef96348f4f884f1c37ea466de, type: 3}
+  - id: 7
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: a52ba90ed0e126c4eaeaf978d4a5547d, type: 3}
+    frames:
+    - {fileID: 21300000, guid: a52ba90ed0e126c4eaeaf978d4a5547d, type: 3}
+  - id: 8
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: f300c05fd96712e4e9e9a2e11591537f, type: 3}
+    frames:
+    - {fileID: 21300000, guid: f300c05fd96712e4e9e9a2e11591537f, type: 3}
+  - id: 9
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c14e89ebb1d019f489fe491eb32a3339, type: 3}
+    frames:
+    - {fileID: 21300000, guid: c14e89ebb1d019f489fe491eb32a3339, type: 3}
+  - id: 10
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 943d7b1a729b92c41b47c2df2e0d160a, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 943d7b1a729b92c41b47c2df2e0d160a, type: 3}
+  rostos:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 7f8849dcb1b6ad74c9bbc01bb88cc0c4, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 7f8849dcb1b6ad74c9bbc01bb88cc0c4, type: 3}
+  - id: 1
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 894c2f9784431c54d90554cb192507a1, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 894c2f9784431c54d90554cb192507a1, type: 3}
+  - id: 2
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 68deb737286388f4eb29a73e1e1a4eab, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 68deb737286388f4eb29a73e1e1a4eab, type: 3}
+  - id: 3
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: d29c9b83aade941408e68df0b4d9b008, type: 3}
+    frames:
+    - {fileID: 21300000, guid: d29c9b83aade941408e68df0b4d9b008, type: 3}
+  - id: 4
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: ffd04c39aa722614da3503285389b943, type: 3}
+    frames:
+    - {fileID: 21300000, guid: ffd04c39aa722614da3503285389b943, type: 3}
+  - id: 4
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 22185686bc010314a9de3140e718d8af, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 22185686bc010314a9de3140e718d8af, type: 3}
+  - id: 6
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: f01bb6b181a7f234dbaa271a9f955ae0, type: 3}
+    frames:
+    - {fileID: 21300000, guid: f01bb6b181a7f234dbaa271a9f955ae0, type: 3}
+  - id: 7
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 39ce0226e3b848e468eab51dbb1d4310, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 39ce0226e3b848e468eab51dbb1d4310, type: 3}
+  - id: 8
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: fe179f2e0fecfd941af5c31991ec46bd, type: 3}
+    frames:
+    - {fileID: 21300000, guid: fe179f2e0fecfd941af5c31991ec46bd, type: 3}
+  - id: 9
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: eef46239d164fe6459120d6c01f87072, type: 3}
+    frames:
+    - {fileID: 21300000, guid: eef46239d164fe6459120d6c01f87072, type: 3}
+  corpo:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: f64c722803c0cb142ae19b4598710d06, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 6ff217b616b095f48bc6ed3eb1aaf7c8, type: 3}
+  - id: 1
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: a6305ee0f1f3bd8439374f6b3ec29fb6, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 9c6eff735d9e59a449d6601883904a16, type: 3}
+  roupas:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b06ba65ecf3d44143acdbf555f536ed2, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 813a71a0b23931e4bbb37df44d8d8a9f, type: 3}
+  - id: 1
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 0a063cb1a2cba9947a5954197857a794, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 0a063cb1a2cba9947a5954197857a794, type: 3}
+  - id: 2
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c1bf42c702c1fcb4fbbad4f9a51ce122, type: 3}
+    frames:
+    - {fileID: 21300000, guid: c1bf42c702c1fcb4fbbad4f9a51ce122, type: 3}
+  - id: 3
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 26b4b5eb544764948b7fbccb6b8d0318, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 26b4b5eb544764948b7fbccb6b8d0318, type: 3}
+  - id: 4
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 46ae9e7f64ad9c246b1f0811942b481c, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 46ae9e7f64ad9c246b1f0811942b481c, type: 3}
+  - id: 5
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 0c68ed580c488b74d9fc4156835cf4c0, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 0c68ed580c488b74d9fc4156835cf4c0, type: 3}
+  - id: 6
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 18ec6281011c9d4478d1785b9faf9487, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 18ec6281011c9d4478d1785b9faf9487, type: 3}
+  - id: 7
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: ab92bf24b65184a449b3d93555c253f7, type: 3}
+    frames:
+    - {fileID: 21300000, guid: ab92bf24b65184a449b3d93555c253f7, type: 3}
+  - id: 8
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: e38aee499b32360448415f708998ab78, type: 3}
+    frames:
+    - {fileID: 21300000, guid: e38aee499b32360448415f708998ab78, type: 3}
+  - id: 9
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 92848a14835064845b97d6175d042ae5, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 92848a14835064845b97d6175d042ae5, type: 3}
+  - id: 10
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 0c7c8fd2803b7754aacf630d22f5587d, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 0c7c8fd2803b7754aacf630d22f5587d, type: 3}
+  - id: 11
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: ca65194052977964e80ec8f26105bae3, type: 3}
+    frames:
+    - {fileID: 21300000, guid: ca65194052977964e80ec8f26105bae3, type: 3}
+  - id: 12
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: b4ca44f3cb49f30499ce8463735310f0, type: 3}
+    frames:
+    - {fileID: 21300000, guid: b4ca44f3cb49f30499ce8463735310f0, type: 3}
+  - id: 13
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 87a51c59c1c4dc7449580d14c7cf4c22, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 87a51c59c1c4dc7449580d14c7cf4c22, type: 3}
+  - id: 13
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 7bbd00efcc83449489dbfa40f2307599, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 7bbd00efcc83449489dbfa40f2307599, type: 3}
+  - id: 15
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c3fb54cbc7e4ec247a8044421d14e132, type: 3}
+    frames:
+    - {fileID: 21300000, guid: c3fb54cbc7e4ec247a8044421d14e132, type: 3}
+  - id: 15
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c3fb54cbc7e4ec247a8044421d14e132, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 5eb75c8df64ef4841b94a6bb95b1c2b7, type: 3}
+  - id: 17
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 91411343776886b4d8c31b102ba0626a, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 91411343776886b4d8c31b102ba0626a, type: 3}
+  - id: 18
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 19bd49487e8f1564b999bf550bff1207, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 19bd49487e8f1564b999bf550bff1207, type: 3}
+  - id: 19
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 549d6b34fc0fb2e49aea3b992d37cb54, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 549d6b34fc0fb2e49aea3b992d37cb54, type: 3}
+  - id: 20
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 019691d1041c49741aaa1b76476695b9, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 019691d1041c49741aaa1b76476695b9, type: 3}
+  - id: 21
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: a4765cd8ba07ac14eafc230245284f26, type: 3}
+    frames:
+    - {fileID: 21300000, guid: a4765cd8ba07ac14eafc230245284f26, type: 3}
+  - id: 22
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 86fbce1f391158d4ab72902c2250d43c, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 86fbce1f391158d4ab72902c2250d43c, type: 3}
+  - id: 23
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 239aec0f1b4416a4bbf391dde5dc2d7e, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 239aec0f1b4416a4bbf391dde5dc2d7e, type: 3}
+  - id: 24
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 0b149cc38d087244a8eb2800bbb4669f, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 0b149cc38d087244a8eb2800bbb4669f, type: 3}
+  - id: 25
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 86d446a453739cb4aa7ebba48c8530fd, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 86d446a453739cb4aa7ebba48c8530fd, type: 3}
+  - id: 26
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: 1c5edb27c0d9f0a459fa3a65cb843091, type: 3}
+    frames:
+    - {fileID: 21300000, guid: 1c5edb27c0d9f0a459fa3a65cb843091, type: 3}
+  pes:
+  - id: 0
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c353f46b664949d4181895a1ff24bf21, type: 3}
+    frames:
+    - {fileID: 21300000, guid: c353f46b664949d4181895a1ff24bf21, type: 3}
+  - id: 1
+    cor: {r: 1, g: 1, b: 1, a: 1}
+    padrao_Sprite: {fileID: 21300000, guid: c101cd550bb13c544957f4d458b9ec21, type: 3}
+    frames:
+    - {fileID: 21300000, guid: c101cd550bb13c544957f4d458b9ec21, type: 3}

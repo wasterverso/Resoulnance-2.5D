@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1266075169123973886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8434874332454620798}
+  - component: {fileID: 8543970018994509584}
+  - component: {fileID: 7008551007678854442}
+  m_Layer: 0
+  m_Name: PlayFlow LobbyManagerV2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8434874332454620798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266075169123973886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1102.8179, y: 304.34778, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2236023651553731103}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8543970018994509584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266075169123973886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8b27b10a0354ae1b426ad2599057fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLobbyCreated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLobbyJoined:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLobbyUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLobbyLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchRunning:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchServerDetailsReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchmakingStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchmakingCancelled:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMatchmakingTimeout:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerJoined:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _logEvents: 0
+--- !u!114 &7008551007678854442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266075169123973886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0b727893e54459cbce543032e2c793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _apiKey: pfclientgPWqZg5V81x16aTUhW0sGI7HxwljcdkBmQKSqXZxAho=
+  _baseUrl: https://api.scale.computeflow.cloud
+  _defaultLobbyConfig: 2v2 Ranking Mode
+  _refreshInterval: 5
+  _autoRefresh: 1
+  _maxRetryAttempts: 3
+  _retryDelay: 1
+  _requestTimeout: 30
+  _connectionTimeout: 10
+  _debugLogging: 0
+--- !u!1 &3813240235740198865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2236023651553731103}
+  - component: {fileID: 4687114933952628872}
+  - component: {fileID: 7654035378437361327}
+  m_Layer: 0
+  m_Name: Lobby Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2236023651553731103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3813240235740198865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8434874332454620798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4687114933952628872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3813240235740198865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82205393706ac084cb9cf3bdff1bc756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfLobbyManager: {fileID: 7008551007678854442}
+  lobbyEvents: {fileID: 7654035378437361327}
+--- !u!114 &7654035378437361327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3813240235740198865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da1c2df101fc024babfa93093654170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playFlowLobbyManagerV2: {fileID: 7008551007678854442}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e879aeb584d40e409b224faf1a5d650, type: 3}
+  m_Name: Luna_Data
+  m_EditorClassIdentifier: 
+  nome: Luna
+  id: 1
+  Ativo: 1
+  podeComprar: 0
+  classe: 1
+  vida: 40
+  escudo: 60
+  velocidade: 6
+  cargasDash: 6
+  Afinidade1: 1
+  Afinidade2: 5
+  NaoAfinidade1: 7
+  NaoAfinidade2: 2
+  isRanged: 1
+  VelDeAtk: 1
+  danoAtk: 10
+  rangeAtk: 5
+  supremaIcon: {fileID: 21300000, guid: 0fd098ca5b9198e40bbf531bc4aa32d9, type: 3}
+  recargaSuprema: 15
+  arrastarSuprema: 0
+  passivaDesc: "A cada 3 ataque basicos, ganha uma pequena acelera\xE7\xE3o de velocidade."
+  supremaDesc: Luna fica invisivel por 5 segundos, mas pode revelar sua posicao ao
+    usar habilidades ou ataque basicos.
+  quadradoSprite: {fileID: 21300000, guid: c83085f682041824d8d94eba01f7451f, type: 3}
+  kdaSprite: {fileID: 21300000, guid: 2a8f724a87bc6064ea2f4c0838b8aced, type: 3}
+  moedasValor: 0
+  cristaisValor: 0
+  usarPadrao: 1
+  deckAtual: 0
+  decks:
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  - nomeDeck: 
+    cartas: []
+    itemAtivavel:
+      nomeItem: 
+      id: 0
+      descricao: 
+      iconSprite: {fileID: 0}
+      tempoCowntDown: 0
+      arrastar: 0
+      verificarRange: 0
+  skins:
+  - nome: Padrao
+    id: 0
+    SplashSprite: {fileID: 21300000, guid: 9e9d8212dfab07248bacbe25060401aa, type: 3}
+    painelSprite: {fileID: 21300000, guid: 51da63b95f2e2ad43b35cbd6de7b0440, type: 3}
+    quadroSprite: {fileID: 21300000, guid: 50cdf83435260884cb2f3ff2717408f4, type: 3}
+    prefab_UI: {fileID: 2021468567234768863, guid: 83ce022e139037342a69b34551709031, type: 3}
+    skinOverrideController: {fileID: 0}
+    armaOverrideController: {fileID: 0}
+    hitArma: {fileID: 0}
+    cristaisValor: 0
+    evento: 0
+  prefabPersonagem: {fileID: 3536481447938680525, guid: 921cdb2c3e1ed2748a7318fcfa71e3b6, type: 3}
