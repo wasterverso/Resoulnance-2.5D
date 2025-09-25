@@ -33855,8 +33855,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1763598861}
-  - {fileID: 422213376}
   - {fileID: 1645288842}
+  - {fileID: 422213376}
   - {fileID: 2139978375}
   - {fileID: 910670077}
   m_Father: {fileID: 36834746}
@@ -47431,7 +47431,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911551255702296899, guid: ed17be591598ca143b2426077d9115d0, type: 3}
       propertyPath: m_Color.a
-      value: 0.4392157
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911551255702296899, guid: ed17be591598ca143b2426077d9115d0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911551255702296899, guid: ed17be591598ca143b2426077d9115d0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911551255702296899, guid: ed17be591598ca143b2426077d9115d0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.654902
       objectReference: {fileID: 0}
     - target: {fileID: 6516246824727287553, guid: ed17be591598ca143b2426077d9115d0, type: 3}
       propertyPath: m_LocalScale.x
