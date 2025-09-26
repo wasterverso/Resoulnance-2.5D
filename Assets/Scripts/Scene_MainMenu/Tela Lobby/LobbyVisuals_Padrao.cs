@@ -25,6 +25,7 @@ namespace Resoulnance.Telas.TelaLobby
             pfLobbyManager = PlayFlowLobbyManagerV2.Instance;
             pfLobbyManager.Events.OnLobbyUpdated.AddListener(AtualizouLobby);
 
+            iniciarPartida_btn.onClick.RemoveAllListeners();
             iniciarPartida_btn.onClick.AddListener(() => IniciarPartida());
             padraoPainel.SetActive(true);
         }
@@ -75,7 +76,7 @@ namespace Resoulnance.Telas.TelaLobby
             startLobbyController.IniciarPartida();
         }
 
-        public void SairDoLobby()
+        public void DesativarInscricoes()
         {
             pfLobbyManager.Events.OnLobbyUpdated.RemoveListener(AtualizouLobby);
             padraoPainel.SetActive(false);

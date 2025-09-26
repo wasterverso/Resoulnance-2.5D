@@ -328,7 +328,7 @@ namespace Resoulnance.Telas.TelaLobby
                 jogador.authId = idAuth;
                 jogador.nickname = nick;
                 jogador.team = teamPlayer;
-                jogador.avatarCustom = novoAvatar;
+                //jogador.avatarCustom = novoAvatar;
 
                 ListTeamController.Instance.JogadoresConfig.Add(jogador);
             }

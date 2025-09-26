@@ -298,18 +298,18 @@ namespace Resoulnance.Scene_Preparation.Visuals
             var nick = playerConfig.Nickname;
             var idAuth = playerConfig.idAuth;
 
-            prepController.AtualizarInfoNoServer
-                (
-                idAuth,
-                nick,
-                meuId,
-                flyerEscolhido.id,
-                idSkinAtual,
-                deckEscolhido.cartas[0].id,
-                deckEscolhido.cartas[1].id,
-                deckEscolhido.cartas[2].id,
-                deckEscolhido.itemAtivavel.id
-                );
+            var novoJogadorRpc = new Jogador();
+            novoJogadorRpc.authId = idAuth;
+            novoJogadorRpc.nickname = nick;
+            novoJogadorRpc.playerID = meuId;
+            novoJogadorRpc.idFlyer = flyerEscolhido.id;
+            novoJogadorRpc.idSkin = idSkinAtual;
+            novoJogadorRpc.idCarta1 = deckEscolhido.cartas[0].id;
+            novoJogadorRpc.idCarta2 = deckEscolhido.cartas[1].id;
+            novoJogadorRpc.idCarta3 = deckEscolhido.cartas[2].id;
+            novoJogadorRpc.idItemAtivavel = deckEscolhido.itemAtivavel.id;
+
+            prepController.AtualizarInfoNoServer(novoJogadorRpc);
         }
     }
 }

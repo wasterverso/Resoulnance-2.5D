@@ -14,6 +14,7 @@ namespace Resoulnance.Telas.TelaCartas
         [SerializeField] StartTelaCartas startTelaCartas;
         [SerializeField] FlyerPainel_TelaCartas flyerPainelCartas;
         [SerializeField] InfoCartaPainel infoCartaPainel;
+        [SerializeField] TrocarItens_TelaCartas trocarItem;
 
         [Header("Deck Cartas")]
         [SerializeField] Sprite CartaPadrao;
@@ -165,7 +166,13 @@ namespace Resoulnance.Telas.TelaCartas
                 }
             }
 
-            item_img.sprite = decksTemporarios[startTelaCartas.deckAtual].itemAtivavel.iconSprite;
+            if (decksTemporarios[startTelaCartas.deckAtual].itemAtivavel.nomeItem != string.Empty)
+                item_img.sprite = decksTemporarios[startTelaCartas.deckAtual].itemAtivavel.iconSprite;
+            else
+            {
+                decksTemporarios[startTelaCartas.deckAtual].itemAtivavel = ListaDecks.Instance.itensData.itensAtivaveis[0];
+                item_img.sprite = decksTemporarios[startTelaCartas.deckAtual].itemAtivavel.iconSprite;
+            }
         }
 
         public void LimparDeckAtual()
@@ -253,7 +260,7 @@ namespace Resoulnance.Telas.TelaCartas
         {
             editouDeck = true;
 
-            //trocarItem.AbrirPainelItens(decksTemporarios[startTelaCartas.deckAtual].itemAtivavel);
+            trocarItem.AbrirPainelItens(decksTemporarios[startTelaCartas.deckAtual].itemAtivavel);
         }
     }
 }

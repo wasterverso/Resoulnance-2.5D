@@ -34,8 +34,18 @@ namespace Resoulnance.Scene_Preparation.Inicialize
                 var nick = playerConfig.Nickname;
                 var idAuth = playerConfig.idAuth;
 
+                ListTeamController.Instance.meuId = meuId.id;
+
                 prepStartServer.PlayerPronto_ServerRpc(meuId, nick, idAuth);
                 prepController.IniciarAtualizacoes();
+            }
+        }
+
+        protected override void OnDespawned()
+        {
+            if (isServer && ListTeamController.Instance.networkMode == NetworkMode.Host)
+            {
+                networkManager.onLocalPlayerReceivedID -= ChamarInfos;
             }
         }
     }

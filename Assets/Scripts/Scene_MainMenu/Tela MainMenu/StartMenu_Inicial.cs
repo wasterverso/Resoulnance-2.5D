@@ -78,25 +78,22 @@ namespace Resoulnance.Telas.TelaMainMenu
                 return true;
             }
 
-            if (AuthenticationService.Instance.SessionTokenExists)
+            try
             {
-                try
-                {
-                    await AuthenticationService.Instance.SignInAnonymouslyAsync();
-                    Debug.Log($"{TT} Login automático bem-sucedido. PlayerID: {AuthenticationService.Instance.PlayerId}");
-                    return true;
-                }
-                catch (AuthenticationException ex)
-                {
-                    Debug.LogError($"{TT} Erro no login automático: {ex.Message}");
-                    //NotificarPainel.Instance.AtivarErro(false, 0, $"{ex.Message}");
-                    return false;
-                }
+                await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                Debug.Log($"{TT} Login automático bem-sucedido. PlayerID: {AuthenticationService.Instance.PlayerId}");
+                return true;
+            }
+            catch (AuthenticationException ex)
+            {
+                Debug.LogError($"{TT} Erro no login automático: {ex.Message}");
+                NotificarPainel.Instance.AtivarErro(false, 0, $"{ex.Message}");
+                return false;
             }
 
-            Debug.LogError($"{TT} Nenhum login anterior encontrado.");
+            //Debug.LogError($"{TT} Nenhum login anterior encontrado.");
             //NotificarPainel.Instance.AtivarErro(false, 0, "Nenhum login anterior encontrado.");
-            return false;
+            //return false;
         }
 
         private async void CarregarGameData()

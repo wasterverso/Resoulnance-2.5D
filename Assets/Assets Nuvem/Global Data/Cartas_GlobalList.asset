@@ -41,6 +41,34 @@ MonoBehaviour:
     rangeProcurar: 0
     prefab: {fileID: 284105829098542317, guid: 1497c21e40adb344ca4120c88adfdd8c, type: 3}
     hitPrefab: {fileID: 0}
+  - NomeCarta: Lanternate
+    id: 1
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: bb08c63ffe1bdbf4d9a21d6f7b446c1b, type: 3}
+    tempoRecarga: 30
+    efeitosCarta:
+      Alvo: 3
+      dano: 18
+      danoReal: 0
+      vida: 0
+      escudo: 0
+      velocidade: -2
+      controle: 0
+      imunidade: 0
+    acao: "Lan\xE7a uma grande bola de energia e desacelera quem acertar."
+    tipo: 1
+    valorAtributo1: 18
+    valorAtributo2: -2
+    arrastar: 1
+    in_Mapa: 1
+    In_Player: 0
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 3575569008841008769, guid: a344518d58cb82f499a2024128173845, type: 3}
+    hitPrefab: {fileID: 0}
   - NomeCarta: Fanbuu
     id: 2
     cartaAtiva: 0
@@ -69,6 +97,34 @@ MonoBehaviour:
     rangeProcurar: 0
     prefab: {fileID: 2743860401330450793, guid: 51881fe02b059cc49bb208a335a472f3, type: 3}
     hitPrefab: {fileID: 5542548157232074539, guid: 4e9cebac80e1bf84e935d1419d8168d7, type: 3}
+  - NomeCarta: Rapa
+    id: 3
+    cartaAtiva: 1
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 5cc1c6c17fab08f47adb5b582916c1e1, type: 3}
+    tempoRecarga: 0
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 0
+      escudo: 0
+      velocidade: 1
+      controle: 0
+      imunidade: 0
+    acao: Aumenta a velocidade de movimento.
+    tipo: 5
+    valorAtributo1: 1
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
   - NomeCarta: Beela
     id: 4
     cartaAtiva: 0
@@ -95,6 +151,35 @@ MonoBehaviour:
     alvoNoRange: 1
     scalaDoCircle: 5
     rangeProcurar: 5
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: NozCratch
+    id: 5
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 86ac766431622d443b71a4de2afa1dc0, type: 3}
+    tempoRecarga: 30
+    efeitosCarta:
+      Alvo: 3
+      dano: 20
+      danoReal: 0
+      vida: 0
+      escudo: 0
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: "Instala uma bomba na posi\xE7\xE3o do flyer. Explode se o advers\xE1rio
+      chegar perto. Explode sozinha depois de um tempo."
+    tipo: 7
+    valorAtributo1: 20
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 1
+    In_Player: 0
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
     prefab: {fileID: 0}
     hitPrefab: {fileID: 0}
   - NomeCarta: Brabuleta
@@ -125,31 +210,199 @@ MonoBehaviour:
     rangeProcurar: 0
     prefab: {fileID: 8182482244597205116, guid: 737c33972e981184ebea889af37e2463, type: 3}
     hitPrefab: {fileID: 3391024868951920370, guid: e41f65e772696694da8322ef889f00d0, type: 3}
-  - NomeCarta: Lanternate
-    id: 1
+  - NomeCarta: Fadah
+    id: 7
     cartaAtiva: 0
     podeComprar: 1
     podeColocarDeck: 1
-    splashSprite: {fileID: 21300000, guid: bb08c63ffe1bdbf4d9a21d6f7b446c1b, type: 3}
-    tempoRecarga: 30
+    splashSprite: {fileID: 21300000, guid: e3782a53b3a268740b5c5653b112b3e9, type: 3}
+    tempoRecarga: 35
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 100
+      escudo: 0
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: Cura toda a sua vida.
+    tipo: 6
+    valorAtributo1: 100
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: Cocaco
+    id: 8
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 2a0d5b5a97d39674798bef4c9ff8112f, type: 3}
+    tempoRecarga: 15
     efeitosCarta:
       Alvo: 3
-      dano: 18
+      dano: 15
       danoReal: 0
       vida: 0
       escudo: 0
-      velocidade: -2
+      velocidade: 0
       controle: 0
       imunidade: 0
-    acao: "Lan\xE7a uma grande bola de energia e desacelera quem acertar."
-    tipo: 1
-    valorAtributo1: 18
-    valorAtributo2: -2
+    acao: "Empurra os adversarios na dire\xE7\xE3o escolhida e causa dano."
+    tipo: 2
+    valorAtributo1: 15
+    valorAtributo2: 0
     arrastar: 1
     in_Mapa: 1
     In_Player: 0
     alvoNoRange: 0
     scalaDoCircle: 0
     rangeProcurar: 0
-    prefab: {fileID: 3575569008841008769, guid: a344518d58cb82f499a2024128173845, type: 3}
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: Gorikeno
+    id: 9
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 8752c03908b28c44797726212e0479cc, type: 3}
+    tempoRecarga: 25
+    efeitosCarta:
+      Alvo: 3
+      dano: 0
+      danoReal: 0
+      vida: 0
+      escudo: 0
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: O proximo ataque basico que voce acertar vai causar mais dano.
+    tipo: 2
+    valorAtributo1: 5
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: BeroBero
+    id: 10
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 07c3238e8e3784c448d5bcf4ce998a3a, type: 3}
+    tempoRecarga: 18
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 0
+      escudo: 30
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: Recupera escudo e ganha velocidade.
+    tipo: 3
+    valorAtributo1: 30
+    valorAtributo2: 2
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: Ostrid
+    id: 11
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 44f83caffba1de5418f38612ca7c9017, type: 3}
+    tempoRecarga: 25
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 0
+      escudo: 100
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: Recupera todo seu escudo.
+    tipo: 3
+    valorAtributo1: 100
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: Gominho
+    id: 12
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: b6ab5786832076645b6b2447813da0c5, type: 3}
+    tempoRecarga: 35
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 10
+      escudo: 0
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: Teleporta para o aliado mais proximo e recupera vida.
+    tipo: 4
+    valorAtributo1: 10
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
+    hitPrefab: {fileID: 0}
+  - NomeCarta: PantonBase
+    id: 13
+    cartaAtiva: 0
+    podeComprar: 1
+    podeColocarDeck: 1
+    splashSprite: {fileID: 21300000, guid: 61605344c09840646999ddbadc2bf7bb, type: 3}
+    tempoRecarga: 35
+    efeitosCarta:
+      Alvo: 1
+      dano: 0
+      danoReal: 0
+      vida: 0
+      escudo: 10
+      velocidade: 0
+      controle: 0
+      imunidade: 0
+    acao: "Teleporta para o guardi\xE3o e recupera escudo. (Se n\xE3o levar dano)"
+    tipo: 4
+    valorAtributo1: 10
+    valorAtributo2: 0
+    arrastar: 0
+    in_Mapa: 0
+    In_Player: 1
+    alvoNoRange: 0
+    scalaDoCircle: 0
+    rangeProcurar: 0
+    prefab: {fileID: 0}
     hitPrefab: {fileID: 0}

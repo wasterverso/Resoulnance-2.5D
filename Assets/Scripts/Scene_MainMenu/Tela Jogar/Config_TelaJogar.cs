@@ -12,9 +12,7 @@ namespace Resoulnance.Telas.TelaJogar
         [SerializeField] Start_LobbyController startLobbyController;
 
         [Header("UI")]
-        [SerializeField] GameObject lobby_Painel;
         [SerializeField] GameObject calculadora_Painel;
-
 
         public void CriarSala()
         {

@@ -1,11 +1,12 @@
 using PurrNet;
 using Resoulnance.Flyers;
+using Resoulnance.Player;
 using Resoulnance.Scene_Preparation.Visuals;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Analytics.IAnalytic;
 
 namespace Resoulnance.Scene_Preparation.Controles
 {
@@ -25,21 +26,32 @@ namespace Resoulnance.Scene_Preparation.Controles
             }
         }
 
-        public void IniciarAtualizacoes()
+        public async void IniciarAtualizacoes()
         {
-            List<Jogador> selectedTeam = ListTeamController.Instance.JogadoresConfig
-            .Where(j => j.team == ListTeamController.Instance.meuTime).ToList();
+            List<Jogador> selectedTeam = await ReceberJogadores_ServerRpc();
 
-            int maxCount = Mathf.Min(selectedTeam.Count, playersAliados.Length);
+            Team meuTime = selectedTeam.Find(t => t.authId == PlayerConfigData.Instance.idAuth).team;
+            ListTeamController.Instance.meuTime = meuTime;
+
+            var timeSelecionado = selectedTeam.Where(j => j.team == meuTime).ToList();
+            int maxCount = Mathf.Min(timeSelecionado.Count, playersAliados.Length);
 
             for (int i = 0; i < maxCount; i++)
             {
-                playersAliados[i].idAuth = selectedTeam[i].authId;
-                playersAliados[i].nome_txt.text = selectedTeam[i].nickname;
+                playersAliados[i].idAuth = timeSelecionado[i].authId;
+                playersAliados[i].nome_txt.text = timeSelecionado[i].nickname;
                 playersAliados[i].obj.SetActive(true);
             }
 
             TelaDeCarregamento.Instance.FazerFadeOut();
+        }
+
+        [ServerRpc(requireOwnership: false)]
+        async Task<List<Jogador>> ReceberJogadores_ServerRpc()
+        {
+            await Task.Yield(); //Esperar o proximo frame
+
+            return ListTeamController.Instance.JogadoresConfig;
         }
 
         [ObserversRpc(runLocally: true, requireServer: false)]
@@ -56,54 +68,49 @@ namespace Resoulnance.Scene_Preparation.Controles
         }
 
         [ServerRpc(requireOwnership: false)]
-        public void AtualizarInfoNoServer(
-            string idAuthPlayer, string nick, PlayerID idPlayer, int idFlyer, int idSkin, int c1, int c2, int c3, int idItem)
+        public void AtualizarInfoNoServer(Jogador jogador)
         {
             if (!isServer) return;
 
             var listTeamController = ListTeamController.Instance;
-            var jogadorExistente = listTeamController.JogadoresConfig.FirstOrDefault(j => j.authId == idAuthPlayer);
+            Jogador jogadorExistente = listTeamController.JogadoresConfig.FirstOrDefault(j => j.authId == jogador.authId);
 
-            if (jogadorExistente == null)
-            {
-                jogadorExistente = new Jogador { authId = idAuthPlayer };
-                listTeamController.JogadoresConfig.Add(jogadorExistente);
-            }
+            jogadorExistente.nickname = jogador.nickname;
+            jogadorExistente.playerID = jogador.playerID;
+            //jogadorExistente.team = 
+            //jogadorExistente.idKdaBackground = 
+            //jogadorExistente.idHudBackground = 
+            jogadorExistente.idCarta1 = jogador.idCarta1;
+            jogadorExistente.idCarta2 = jogador.idCarta2;
+            jogadorExistente.idCarta3 = jogador.idCarta3;
+            jogadorExistente.idItemAtivavel = jogador.idItemAtivavel;
+            jogadorExistente.idFlyer = jogador.idFlyer;
+            jogadorExistente.idSkin = jogador.idSkin;
+            //jogadorExistente.idEfeitoAbate =
 
-            jogadorExistente.playerID = idPlayer;
-            jogadorExistente.nickname = nick;
-            jogadorExistente.idFlyer = idFlyer;
-            jogadorExistente.idSkin = idSkin;
-            jogadorExistente.idCarta1 = c1;
-            jogadorExistente.idCarta2 = c2;
-            jogadorExistente.idCarta3 = c3;
-            jogadorExistente.idItemAtivavel = idItem;
-
-            AtualizarPlayerNosClientes(idAuthPlayer, nick, idPlayer, idFlyer, idSkin, c1, c2, c3, idItem);
+            AtualizarPlayerNosClientes(jogadorExistente);
         }
 
         [ObserversRpc(runLocally: true)]
-        void AtualizarPlayerNosClientes(
-            string idAuthPlayer, string nick, PlayerID idPlayer, int idFlyer, int idSkin, int c1, int c2, int c3, int idItem)
+        void AtualizarPlayerNosClientes(Jogador jogador)
         {
-
             var listTeamController = ListTeamController.Instance;
-            var jogadorExistente = listTeamController.JogadoresConfig.FirstOrDefault(j => j.authId == idAuthPlayer);
+            var jogadorExistente = listTeamController.JogadoresConfig.FirstOrDefault(j => j.authId == jogador.authId);
 
             if (jogadorExistente == null)
             {
-                jogadorExistente = new Jogador { authId = idAuthPlayer };
+                jogadorExistente = new Jogador();
+                jogadorExistente.CopyFrom(jogador);
                 listTeamController.JogadoresConfig.Add(jogadorExistente);
             }
 
-            jogadorExistente.playerID = idPlayer;
-            jogadorExistente.nickname = nick;
-            jogadorExistente.idFlyer = idFlyer;
-            jogadorExistente.idSkin = idSkin;
-            jogadorExistente.idCarta1 = c1;
-            jogadorExistente.idCarta2 = c2;
-            jogadorExistente.idCarta3 = c3;
-            jogadorExistente.idItemAtivavel = idItem;
+            //jogadorExistente = jogador;
+        }
+
+        [ObserversRpc(requireServer: false, runLocally: true)]
+        public void DebugServidor(string textDebug)
+        {
+            Debug.Log($"[Debug Server] {textDebug}");
         }
 
         [System.Serializable]

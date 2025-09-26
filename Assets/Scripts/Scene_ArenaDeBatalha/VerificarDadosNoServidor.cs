@@ -19,7 +19,7 @@ public class VerificarDadosNoServidor : NetworkBehaviour
     [ServerRpc(requireOwnership: false)]
     void ServerData()
     {
-        var config = PlayFlowServerConfig.LoadConfig();
+        PlayFlowServerConfig config = PlayFlowServerConfig.LoadConfig();
         if (config != null)
         {
             Debug.Log($"Server instance ID is: {config.instance_id}");

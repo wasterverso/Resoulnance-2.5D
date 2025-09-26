@@ -40,7 +40,7 @@ namespace Resoulnance.Scene_Arena.HUD
             dash_btn.interactable = (velRefs.velBasica == velRefs.velAtual);
         }
 
-#if UNITY_EDITOR || UNITY_STANDALONE //Rodar só no PC e Editor
+#if (UNITY_EDITOR || UNITY_STANDALONE) && !UNITY_SERVER //Rodar só no PC e Editor
         private void Update()
         {
             if (Keyboard.current.leftShiftKey.wasPressedThisFrame)

@@ -159,7 +159,7 @@ public class TelaDeCarregamento : MonoBehaviour
     {
         slot.idPlayer = jogador.authId;
         slot.nick.text = jogador.nickname;
-        slot.avatarCustom.AtribuirDados(jogador.avatarCustom);
+        //slot.avatarCustom.AtribuirDados(jogador.avatarCustom);
         slot.avatarCustom.MostrarAvatar(true);
 
         slot.obj.SetActive(true);

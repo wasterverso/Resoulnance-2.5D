@@ -25,6 +25,7 @@ namespace Resoulnance.Telas.TelaLobby
         [SerializeField] GameObject lobbyPainel;
 
         string idSala;
+        TiposDeSalas tipoSala;
 
         public void StartSala(string codigo)
         {
@@ -34,8 +35,7 @@ namespace Resoulnance.Telas.TelaLobby
             idSala_txt.text = idSala;
 
             Dictionary<string, object> dadosLobby = pfLobbyManager.CurrentLobby.settings;
-            TiposDeSalas tipoSala = TiposDeSalas.Nenhum;
-
+            tipoSala = TiposDeSalas.Nenhum;
             if (dadosLobby.TryGetValue("gameMode", out object gameModeObj))
             {
                 string gameModeString = gameModeObj.ToString();
@@ -54,12 +54,13 @@ namespace Resoulnance.Telas.TelaLobby
             else
             {
                 lobbyVisuals.EntrouNoLobby();
+                pfLobbyManager.Events.OnMatchFound.AddListener(OnMatchFound);
             }
 
+            tipoSala_txt.text = tipoSala.ToString();
             lobbyPainel.SetActive(true);
 
-            pfLobbyManager.Events.OnMatchRunning.AddListener(PartidaFoiIniciada);
-            pfLobbyManager.Events.OnMatchFound.AddListener(OnMatchFound);
+            pfLobbyManager.Events.OnMatchRunning.AddListener(PartidaFoiIniciada);            
 
             NotificarPainel.Instance.AtivarCarregandoPainel(false);
         }
@@ -76,7 +77,14 @@ namespace Resoulnance.Telas.TelaLobby
             else
                 Debug.LogWarning("Jogador não conseguiu sair do lobby");
 
-            salaPersonalizada.DesativarInscricoes();
+            if (tipoSala == TiposDeSalas.Personalizada)
+            {
+                salaPersonalizada.DesativarInscricoes();
+            }
+            else
+            {
+                lobbyVisuals.DesativarInscricoes();
+            }
         }
 
         public async void IniciarPartida()

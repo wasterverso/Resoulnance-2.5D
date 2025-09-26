@@ -59,22 +59,17 @@ namespace Resoulnance.Scene_Preparation.Inicialize
 
             var jogadorExistente = listTeamController.JogadoresConfig.FirstOrDefault(j => j.authId == idAuth);
 
+            bool jaTinha = false;
+
             if (jogadorExistente != null)
             {
                 jogadorExistente.playerID = playerID;
                 jogadorExistente.nickname = nick;
-            }
-            else
-            {
-                Jogador jogador = new Jogador();
-                jogador.playerID = playerID;
-                jogador.nickname = nick;
-                jogador.authId = idAuth;
 
-                listTeamController.JogadoresConfig.Add(jogador);                
+                jaTinha = true;
             }
 
-            DebugServidor($"Players Conectados: {playersConnectados.value}, jogador adicionado");
+            DebugServidor($"Players Conectados: {playersConnectados.value}, jogador adicionado. Ja tinha: {jaTinha}");
         }
 
         private IEnumerator EsperarPelaCondicao(Func<bool> condition)
@@ -85,7 +80,7 @@ namespace Resoulnance.Scene_Preparation.Inicialize
             }
         }
 
-        [ObserversRpc]
+        [ObserversRpc(requireServer: false, runLocally: true)]
         public void DebugServidor(string textDebug)
         {
             Debug.Log($"[Debug Server] {textDebug}");

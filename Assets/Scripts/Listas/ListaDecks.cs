@@ -23,7 +23,6 @@ public class ListaDecks : MonoBehaviour
     public ItensAtivaveis_Data itensData;
 
     [Header("Decks")]
-    public Deck deckEscolhido;
     public List<Deck> meusDecksUniversais = new List<Deck>(3);
     public int deckAtual = 0;
 
