@@ -2,7 +2,9 @@ using Resoulnance.Cartas;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.Services.CloudSave;
 using UnityEngine;
+
 
 [System.Serializable]
 public class Deck
@@ -38,12 +40,12 @@ public class ListaDecks : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    /*
+
     public async void SalvarDecks()
     {
         MeusDecksSaveData saveData = new MeusDecksSaveData();
 
-        foreach (Deck deck in meusDecks)
+        foreach (Deck deck in meusDecksUniversais)
         {
             List<int> novosIds = new List<int>();
 
@@ -76,7 +78,7 @@ public class ListaDecks : MonoBehaviour
 
     public async Task CarregarDecks()
     {
-        if (meusDecks.Count != 0) return;
+        if (meusDecksUniversais.Count != 0) return;
 
         var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { "MeusDecks" });
 
@@ -85,7 +87,7 @@ public class ListaDecks : MonoBehaviour
             string json = playerData["MeusDecks"].Value.GetAs<string>();
             MeusDecksSaveData saveData = JsonUtility.FromJson<MeusDecksSaveData>(json);
 
-            meusDecks.Clear();
+            meusDecksUniversais.Clear();
             foreach (var deckSaveData in saveData.myDecks)
             {
                 Deck deck = new Deck
@@ -104,22 +106,21 @@ public class ListaDecks : MonoBehaviour
                     }
                 }
 
-                meusDecks.Add(deck);
+                meusDecksUniversais.Add(deck);
             }
         }
 
-        while (meusDecks.Count < 3)
+        while (meusDecksUniversais.Count < 3)
         {
             Deck deck = new Deck
             {
-                nomeDeck = $"Deck {meusDecks.Count + 1}",
+                nomeDeck = $"Deck {meusDecksUniversais.Count + 1}",
                 cartas = new List<Carta>(),
                 itemAtivavel = itensData.itensAtivaveis[0]
             };
-            meusDecks.Add(deck);
+            meusDecksUniversais.Add(deck);
         }
     }
-    */
 }
 
 [System.Serializable]

@@ -126,7 +126,6 @@ public class Luna_Projetil : PredictedIdentity<Luna_Projetil.State>
 
         if (guardiaoScript != null)
         {
-            Debug.Log($"Temscript guardiao: {other.gameObject.name}");
             Team teamGuardiao = guardiaoScript.TeamGuardiao();
             if (teamGuardiao != meuTime)
             {

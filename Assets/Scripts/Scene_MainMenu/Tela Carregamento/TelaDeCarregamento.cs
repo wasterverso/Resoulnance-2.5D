@@ -34,6 +34,9 @@ public class TelaDeCarregamento : MonoBehaviour
     [SerializeField] PlayerObj[] bluePlayers = new PlayerObj[4];
     [SerializeField] PlayerObj[] redPlayers = new PlayerObj[4];
 
+    [Header("Carregamento Match")]
+    [SerializeField] GameObject matchCarregamentoPainel;
+
     void Awake()
     {
         if (Instance == null)
@@ -170,4 +173,9 @@ public class TelaDeCarregamento : MonoBehaviour
         avatarCarregamentoPainel.SetActive(false);
     }
     #endregion
+
+    public void CarregamentoAchouPartida(bool carregar)
+    {
+        matchCarregamentoPainel.SetActive(carregar);
+    }
 }

@@ -1,12 +1,11 @@
 using Resoulnance.Scene_Login.Start;
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Collections;
 using Unity.Services.Authentication;
 using Unity.Services.Authentication.PlayerAccounts;
-using Unity.Services.CloudSave;
-using Unity.Services.CloudSave.Models.Data.Player;
+using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Resoulnance.Scene_Login.Controles
 {
@@ -18,96 +17,114 @@ namespace Resoulnance.Scene_Login.Controles
         [Header("Referências")]
         [SerializeField] GameObject authPainel;
 
-        public void IniciarVerificacaoDeLogin()
+        [Header("Erro  UI")]
+        [SerializeField] Text avisoErro_txt;
+
+        Coroutine avisoCoroutine;
+
+        public async void IniciarVerificacaoDeLogin()
         {
-            // AVISO: JA ESTA CONECTADO (FOI CHAMADO O AuthenticationService.Instance.SignInAnonymouslyAsync)
-            // verifique o PlayerPrefs pra saber se tem login no cache
+            await UnityServices.InitializeAsync();
 
-            loginController.avisoPrincipal_txt.text = "Verificando Login";
-            Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
-
-            bool hasLoggedIn = PlayerPrefs.GetInt("temLogin", 0) == 1;
-            if (hasLoggedIn)
+            if (!AuthenticationService.Instance.SessionTokenExists)
             {
-                Debug.Log("Recuperou ultimo acesso!");
-                FinalizarAuthenticacao();
+                CriarLogin();
             }
             else
             {
-                CriarLogin();
+                try
+                {
+                    await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                    Debug.Log("Recuperou ultimo acesso!");
+                    Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
+
+                    FinalizarAuthenticacao();
+                }
+                catch (AuthenticationException ex)
+                {
+                    CriarLogin();
+                    Debug.LogException(ex);
+                }
+                catch (RequestFailedException ex)
+                {
+                    CriarLogin();
+                    Debug.LogException(ex);
+                }
             }
         }
 
         void CriarLogin()
         {
+            AuthenticationService.Instance.SignOut();
+
             loginController.avisoPrincipal_txt.gameObject.SetActive(false);
             authPainel.gameObject.SetActive(true);
         }
 
         public void FinalizarAuthenticacao()
         {
-            PlayerPrefs.SetInt("temLogin", 1);
-            PlayerPrefs.Save();
-
             authPainel.SetActive(false);
+
             loginController.avisoPrincipal_txt.gameObject.SetActive(true);
             loginController.avisoPrincipal_txt.text = "Login feito com sucesso";
 
-            loginController.VerificarTermos();
+            loginController.ProximaEtapa();
         }
 
-        public async void EntrarComContaVinculada()
+        public async void EntrarAnonimo()
         {
             try
             {
-                bool temSave = await VerificarContaJogador();
+                await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                Debug.Log("Acessou como Anonimo!");
+                Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
 
-                if (!temSave)
-                {
-                    await AuthenticationService.Instance.DeleteAccountAsync();
-                    Debug.Log($"Contas anonima deletada: {AuthenticationService.Instance.PlayerId} || Tem save? {temSave}");
-                }
-
-                // Sai da conta atual (anônima)
-                if (AuthenticationService.Instance.IsSignedIn)
-                {
-                    AuthenticationService.Instance.SignOut();
-                }
-
-                // Agora faz login com a conta já vinculada
-                var accessToken = PlayerAccountService.Instance.AccessToken;
-                await AuthenticationService.Instance.SignInWithUnityAsync(accessToken);
-
-                Debug.Log("Entrou com a conta já vinculada.");
                 FinalizarAuthenticacao();
             }
-            catch (Exception ex)
+            catch (AuthenticationException ex)
             {
-                Debug.LogError("Erro ao entrar com a conta vinculada:");
                 Debug.LogException(ex);
+                MostrarAviso(ex.Message);
             }
-        }
-
-        public void ContinuarComContaAnonima()
-        {
-            Debug.Log($"Entrou como convidado - PlayerID: {AuthenticationService.Instance.PlayerId}");
-
-            FinalizarAuthenticacao();
-        }
-
-
-        async Task<bool> VerificarContaJogador()
-        {
-            bool temSave = false;
-            var keys = await CloudSaveService.Instance.Data.Player.ListAllKeysAsync(
-                new ListAllKeysOptions(new PublicReadAccessClassOptions()));
-            for (int i = 0; i < keys.Count; i++)
+            catch (RequestFailedException ex)
             {
-                Debug.Log(keys[i].Key);
-                temSave = true;
+                Debug.LogException(ex);
+                MostrarAviso(ex.Message);
+            }
+        }
+
+        public void MostrarAviso(string aviso)
+        {
+            if (avisoCoroutine != null)
+            {
+                StopCoroutine(avisoCoroutine);
+            }
+            avisoCoroutine = StartCoroutine(FadeAvisoCoroutine(aviso));
+        }
+
+        IEnumerator FadeAvisoCoroutine(string aviso)
+        {
+            avisoErro_txt.gameObject.SetActive(true);
+            avisoErro_txt.text = aviso;
+            avisoErro_txt.color = Color.white;
+
+            // Mostra o aviso por 5 segundos
+            yield return new WaitForSeconds(5f);
+
+            float duration = 1f; // 1 segundo para o fade
+            float elapsed = 0f;
+
+            Color originalColor = avisoErro_txt.color;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+                avisoErro_txt.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+                yield return null;
             }
 
-            return temSave;
+            avisoErro_txt.gameObject.SetActive(false);
         }
     }
 }

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using Unity.Services.CloudSave;
+using Unity.Services.CloudSave.Models.Data.Player;
+using SaveOptions = Unity.Services.CloudSave.Models.Data.Player.SaveOptions;
 using UnityEngine;
 
 namespace Resoulnance.Player
@@ -36,16 +38,15 @@ namespace Resoulnance.Player
             }
         }
 
-        /*
         public DadosPublicosPlayer GetDadosPlayer()
         {
             DadosPublicosPlayer efeitoIDs = new DadosPublicosPlayer();
             efeitoIDs.nickAuth = NicknameAuth;
             efeitoIDs.id = idAuth;
             efeitoIDs.idElo = eloAtual.ToString();
-            efeitoIDs.idIconPerfil = ListEfeitos.Instance.iconPerfilEscolhido?.id ?? 0;
-            efeitoIDs.idMoldura = ListEfeitos.Instance.molduraEscolhido?.id ?? 0;
-            efeitoIDs.idFundoKda = ListEfeitos.Instance.fundoKdaEscolhido?.id ?? 0;
+            //efeitoIDs.idIconPerfil = ListEfeitos.Instance.iconPerfilEscolhido?.id ?? 0;
+            //efeitoIDs.idMoldura = ListEfeitos.Instance.molduraEscolhido?.id ?? 0;
+            //efeitoIDs.idFundoKda = ListEfeitos.Instance.fundoKdaEscolhido?.id ?? 0;
             efeitoIDs.quantPartidas = quantidadePartidas;
             efeitoIDs.taxaVitoria = taxaVitoria;
 
@@ -61,7 +62,7 @@ namespace Resoulnance.Player
 
             try
             {
-                await CloudSaveService.Instance.Data.Player.SaveAsync(playerData, new Unity.Services.CloudSave.Models.Data.Player.SaveOptions(new PublicWriteAccessClassOptions()));
+                await CloudSaveService.Instance.Data.Player.SaveAsync(playerData, new SaveOptions(new PublicWriteAccessClassOptions()));
                 Debug.Log($"Efeitos publicos salvos: {string.Join(',', playerData)}");
             }
             catch (Exception e)
@@ -119,13 +120,12 @@ namespace Resoulnance.Player
                     Debug.LogWarning($"Dados do jogador com ID {id} não encontrados.");
                 }
             }
-            catch (CloudCodeException ex)
+            catch (Exception ex)
             {
                 Debug.LogError($"Erro ao carregar os dados do jogador: {ex.Message}");
             }
             return dadosJogador;
         }
-        */
     }
 
 }

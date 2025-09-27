@@ -54,7 +54,7 @@ namespace Resoulnance.Scene_Login.Controles
                     else
                     {
                         loginController.avisoPrincipal_txt.text = "Versão Atualizada!";
-                        loginController.VerificarAssetsBuild();
+                        loginController.ProximaEtapa();
                     }
                 }
                 else

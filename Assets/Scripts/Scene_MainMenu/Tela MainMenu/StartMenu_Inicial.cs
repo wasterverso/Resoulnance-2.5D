@@ -16,6 +16,9 @@ namespace Resoulnance.Telas.TelaMainMenu
         string TT = "<color=blue>[Start Menu inicial]</color>";
 
         [Header("Canvas/Paineis")]
+        [SerializeField] AtualizarUI_TelaMainMenu attMainMenuUI;
+
+        [Header("Canvas/Paineis")]
         [SerializeField] GameObject menuPrincipalCanvas;
         [SerializeField] GameObject carregandoPainel;
 
@@ -123,6 +126,8 @@ namespace Resoulnance.Telas.TelaMainMenu
             };
 
             await Task.WhenAll(initializationTasks);
+
+            attMainMenuUI.AtualizarInfos();
 
             menuPrincipalCanvas.SetActive(true);
 

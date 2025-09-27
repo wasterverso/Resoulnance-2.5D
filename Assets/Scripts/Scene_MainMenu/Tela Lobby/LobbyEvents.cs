@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using PlayFlow;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Resoulnance.Telas.TelaLobby
@@ -24,6 +25,7 @@ namespace Resoulnance.Telas.TelaLobby
             events.OnMatchStarted.AddListener(OnMatchStarted);
             events.OnMatchRunning.AddListener(OnMatchRunning);
             events.OnMatchEnded.AddListener(OnMatchEnded);
+            events.OnMatchServerDetailsReady.AddListener(OnMatchServerDetailsReady);
 
             // Eventos de matchmaking
             events.OnMatchmakingStarted.AddListener(OnMatchmakingStarted);
@@ -98,8 +100,46 @@ namespace Resoulnance.Telas.TelaLobby
 
             if (lobby.matchmakingData != null)
             {
-                Debug.Log($"{TT} Dados de matchmaking: {JsonConvert.SerializeObject(lobby.matchmakingData)}");
+                //Debug.Log($"{TT} Dados de matchmaking: {JsonConvert.SerializeObject(lobby.matchmakingData)}");
             }
+            
+        }
+
+        private void OnMatchServerDetailsReady(List<PortMappingInfo> portMappings)
+        {
+            Debug.Log("Detalhes completos do servidor recebidos.");
+
+            /*
+            var lobbyAtual = playFlowLobbyManagerV2.CurrentLobby;
+            if (lobbyAtual?.gameServer?.custom_data != null)
+            {
+                var dadosCustomizados = lobbyAtual.gameServer.custom_data;
+
+                // Acessa informações dos times para partidas baseadas em papéis
+                if (dadosCustomizados.ContainsKey("teams"))
+                {
+                    var times = dadosCustomizados["teams"] as List<object>;
+                    foreach (dynamic time in times)
+                    {
+                        Debug.Log($"Time {time.team_id}:");
+                        foreach (dynamic informacoesLobby in time.lobbies)
+                        {
+                            foreach (var entradaJogador in informacoesLobby.player_states)
+                            {
+                                string idJogador = entradaJogador.Key;
+                                dynamic estadoJogador = entradaJogador.Value;
+                                Debug.Log($"  Jogador {idJogador}: Função = {estadoJogador.role}");
+                            }
+                        }
+                    }
+                }
+
+                // Verifica em qual time você está
+                var meuIdJogador = playFlowLobbyManagerV2.PlayerId;
+                Debug.Log($"Meu ID de jogador: {meuIdJogador}");
+            }
+
+            */
         }
         #endregion
 
@@ -152,6 +192,7 @@ namespace Resoulnance.Telas.TelaLobby
                 events.OnMatchStarted.RemoveAllListeners();
                 events.OnMatchEnded.RemoveAllListeners();
                 events.OnMatchRunning.RemoveAllListeners();
+                events.OnMatchServerDetailsReady.RemoveAllListeners();
 
                 events.OnMatchmakingStarted.RemoveAllListeners();
                 events.OnMatchmakingCancelled.RemoveAllListeners();

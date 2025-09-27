@@ -5940,7 +5940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a8d91aee868af4180eaddaceaead5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetarAoAtivar: 0
+  resetarAoAtivar: 1
   botoesList:
   - botao: {fileID: 37950490}
     painel: {fileID: 0}
@@ -5954,8 +5954,8 @@ MonoBehaviour:
     painel: {fileID: 0}
   colorSelecionada: {r: 0, g: 0, b: 0, a: 1}
   colorpadrao: {r: 0, g: 0, b: 0, a: 1}
-  padrao_img: {fileID: 0}
-  selecionado_img: {fileID: 0}
+  padrao_img: {fileID: 21300000, guid: 70638dc143d36e64ab0d18adcca8d64d, type: 3}
+  selecionado_img: {fileID: 21300000, guid: f520ef3450741e94bacfd5b7b9282672, type: 3}
 --- !u!1 &1969226545
 GameObject:
   m_ObjectHideFlags: 0

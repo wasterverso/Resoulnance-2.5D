@@ -1,9 +1,14 @@
+using Resoulnance.Telas.TelaLobby;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Contador_Lobby : MonoBehaviour
 {
+    [Header("Refs Script")]
+    [SerializeField] Start_LobbyController startLobbyCc;
+
+    [Header("UI")]
     [SerializeField] private Text relogioTxt;
     [SerializeField] GameObject contador_painel;
 
@@ -29,6 +34,9 @@ public class Contador_Lobby : MonoBehaviour
 
     public void Parar()
     {
+        tempo = 0f;
+        relogioTxt.text = "00:00";
+
         rodando = false;
         contador_painel.SetActive(false);
     }
@@ -38,9 +46,10 @@ public class Contador_Lobby : MonoBehaviour
         rodando = true;
     }
 
-    public void Resetar()
+    public void CancelarFila()
     {
-        tempo = 0f;
-        relogioTxt.text = "00:00";
+        Parar();
+
+        startLobbyCc.CancelarFila();
     }
 }

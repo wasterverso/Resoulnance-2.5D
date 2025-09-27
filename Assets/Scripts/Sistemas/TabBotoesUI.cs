@@ -55,14 +55,18 @@ public class TabBotoesUI : MonoBehaviour
                 if (botao.painel != null) botao.painel.SetActive(true);
 
                 image.sprite = selecionado_img;
-                texto.color = colorSelecionada;
+
+                if (texto != null)
+                    texto.color = colorSelecionada;
             }
             else
             {
                 if (botao.painel != null) botao.painel.SetActive(false);
 
                 image.sprite = padrao_img;
-                texto.color = colorpadrao;
+
+                if (texto != null)
+                    texto.color = colorpadrao;
             }
         }
     }

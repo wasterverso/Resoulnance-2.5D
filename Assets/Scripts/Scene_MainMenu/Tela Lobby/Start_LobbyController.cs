@@ -13,9 +13,11 @@ namespace Resoulnance.Telas.TelaLobby
     {
         PlayFlowLobbyManagerV2 pfLobbyManager;
 
-        [Header("UI")]
+        [Header("Refs Scripts")]
         [SerializeField] LobbyVisuals_Padrao lobbyVisuals;
         [SerializeField] LobbyVisuals_Personalizada salaPersonalizada;
+        [SerializeField] Contador_Lobby contadorLobby;
+        [SerializeField] Carregamento_AvatarGameServer avatarGameServer;
 
         [Header("UI")]
         [SerializeField] Text tipoSala_txt;
@@ -23,6 +25,9 @@ namespace Resoulnance.Telas.TelaLobby
 
         [Header("Canvas/Painel")]
         [SerializeField] GameObject lobbyPainel;
+
+        [TextArea(5, 15)]
+        [SerializeField] string dadosMatch_Debug;
 
         string idSala;
         TiposDeSalas tipoSala;
@@ -89,7 +94,11 @@ namespace Resoulnance.Telas.TelaLobby
 
         public async void IniciarPartida()
         {
-            bool iniciou = await pfLobbyManager.GetComponentInChildren<LobbyManager>().StartMatchmaking();                      
+            bool iniciou = await pfLobbyManager.GetComponentInChildren<LobbyManager>().StartMatchmaking();  
+            if (iniciou)
+            {
+                contadorLobby.Iniciar();
+            }
         }
 
         public async void IniciarPartidaPersonalizada()
@@ -113,12 +122,23 @@ namespace Resoulnance.Telas.TelaLobby
 
         void OnMatchFound(Lobby lobby)
         {
-            Debug.Log($"startLobbyController Partida encontrada! Status: {lobby.status}. Servidor do jogo está sendo iniciado...");
+            contadorLobby.Parar();
+
+            TelaDeCarregamento.Instance.CarregamentoAchouPartida(true);
 
             if (lobby.matchmakingData != null)
-            {
+            {                
                 Debug.Log($"startLobbyController Dados de matchmaking: {JsonConvert.SerializeObject(lobby.matchmakingData)}");
             }
+
+            dadosMatch_Debug = JsonConvert.SerializeObject(lobby.gameServer);
+
+            avatarGameServer.LoadAvatars(dadosMatch_Debug);
+        }
+
+        public void CancelarFila()
+        {
+            pfLobbyManager.CancelMatchmaking();
         }
     }
 }

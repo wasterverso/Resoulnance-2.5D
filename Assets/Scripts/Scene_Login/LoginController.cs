@@ -1,4 +1,5 @@
 using Resoulnance.Scene_Login.Controles;
+using Resoulnance.Sistema;
 using System.Collections;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -13,6 +14,7 @@ namespace Resoulnance.Scene_Login.Start
     {
         [Header("Refs Script")]
         [SerializeField] RemoteConfigController remoteConfigController;
+        [SerializeField] AtualizarDadosBuild attDadosBuild;
         [SerializeField] AuthLogin authLogin;
         [SerializeField] NicknameLogin nicknameLogin;
 
@@ -23,7 +25,9 @@ namespace Resoulnance.Scene_Login.Start
         [Header("Paineis")]
         public GameObject semConexaoPainel;
 
-        private void Awake()
+        int etapaAtual = 0;
+
+        private void Start()
         {
             if (Application.platform == RuntimePlatform.LinuxServer)
             {
@@ -42,62 +46,65 @@ namespace Resoulnance.Scene_Login.Start
             avisoPrincipal_txt.gameObject.SetActive(true);
             avisoPrincipal_txt.text = "Carregando...";
 
-            VerificarInternet();
+            ProximaEtapa();
         }
 
-        void VerificarInternet()
+
+        public void ProximaEtapa()
+        {
+            etapaAtual++;
+
+            switch (etapaAtual)
+            {
+                case 1:
+                    FazerVerificaoDeInternet();
+                    break;
+
+                case 2:
+                    VerificarVersao();
+                    break;
+
+                case 3:
+                    VerificarAssetsBuild();
+                    break;
+
+                case 4:
+                    AuthenticarLogin();
+                    break;
+
+                case 5:
+                    VerificarTermos();
+                    break;
+
+                case 6:
+                    CarregarNickname();
+                    break;
+
+                case 7:
+                    CarregarMenu();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        async void FazerVerificaoDeInternet()
         {
             avisoPrincipal_txt.text = "Verificando Conexão...";
 
-            if (Application.internetReachability == NetworkReachability.NotReachable)
+            bool temNet = await VerificarInternet.IniciarVerificacao();
+
+            if (temNet)
             {
-                Debug.LogError("Sem conexão Wifi ou 3G, 4G, 5G.");
-
-                avisoPrincipal_txt.gameObject.SetActive(false);
-                semConexaoPainel.SetActive(true);
-
-                return;
+                avisoPrincipal_txt.text = "Conexão estabelecida";
+                VerificarVersao();
             }
             else
             {
-                StartCoroutine(CheckInternetConnection((isConnected) =>
-                {
-                    if (isConnected)
-                    {
-                        avisoPrincipal_txt.text = "Conexão estabelecida";
-                        StartGame();
-                    }
-                    else
-                    {
-                        Debug.LogError("Sem conexão com a internet.");
-                        avisoPrincipal_txt.gameObject.SetActive(false);
-                        semConexaoPainel.SetActive(true);
-                    }
-                }));
-            }
-        }
-
-        public IEnumerator CheckInternetConnection(System.Action<bool> onResult)
-        {
-            using (UnityWebRequest request = UnityWebRequest.Get("https://www.google.com"))
-            {
-                request.timeout = 5;
-
-                // Envia a requisição e espera a resposta.
-                yield return request.SendWebRequest();
-
-                // Verifica se houve erro na requisição.
-                if (request.result == UnityWebRequest.Result.Success)
-                {
-                    // Conexão bem-sucedida.
-                    onResult?.Invoke(true);
-                }
-                else
-                {
-                    // Falha na conexão.
-                    onResult?.Invoke(false);
-                }
-            }
+                avisoPrincipal_txt.gameObject.SetActive(false);
+                semConexaoPainel.SetActive(true);
+            }            
         }
 
         async void StartGame()
@@ -136,33 +143,34 @@ namespace Resoulnance.Scene_Login.Start
 
         void VerificarVersao()
         {
-            remoteConfigController.StartarRemoteConfig();
+            ProximaEtapa();
+            //remoteConfigController.StartarRemoteConfig();
         }
 
-        public void VerificarAssetsBuild()
+        void VerificarAssetsBuild()
         {
-            AuthenticarLogin(); // temp
+            ProximaEtapa();
 
             //attDadosBuild.ComecarChecagem();
         }
 
-        public void AuthenticarLogin()
+        void AuthenticarLogin()
         {
             authLogin.IniciarVerificacaoDeLogin();
         }
 
-        public void VerificarTermos()
+        void VerificarTermos()
         {
             CarregarNickname();
             //termosCondicoes.IniciarTermosCondicoes();
         }
 
-        public void CarregarNickname()
+        void CarregarNickname()
         {
             nicknameLogin.IniciarPainenlNick();
         }
 
-        public void CarregarMenu()
+        void CarregarMenu()
         {
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }

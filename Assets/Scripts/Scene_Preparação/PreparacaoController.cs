@@ -43,7 +43,7 @@ namespace Resoulnance.Scene_Preparation.Controles
                 playersAliados[i].obj.SetActive(true);
             }
 
-            TelaDeCarregamento.Instance.FazerFadeOut();
+            TelaDeCarregamento.Instance.CarregamentoAchouPartida(false);
         }
 
         [ServerRpc(requireOwnership: false)]
